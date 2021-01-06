@@ -8,7 +8,8 @@ from src.weatherbot import WeatherBot
 def main() -> None:
     dotenv.load_dotenv()
 
-    bot = WeatherBot(os.getenv('BOT_TOKEN'))
+    bot = WeatherBot(os.getenv('TELEGRAM_TOKEN'),
+                     os.getenv('OPENWEATHER_TOKEN'))
     bot.start()
 
 
